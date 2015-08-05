@@ -92,8 +92,8 @@
             <artifactId>gt-xml</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.typesafe</groupId>
-            <artifactId>scalalogging-slf4j_2.10</artifactId>
+            <groupId>com.typesafe.scala-logging</groupId>
+            <artifactId>scala-logging-slf4j_2.11</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -125,7 +125,7 @@
         <!-- test deps -->
         <dependency>
             <groupId>org.specs2</groupId>
-            <artifactId>specs2_2.10</artifactId>
+            <artifactId>specs2_2.11</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

@@ -24,6 +24,10 @@
             <artifactId>scala-library</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-parser-combinators_2.11</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.typesafe</groupId>
             <artifactId>config</artifactId>
         </dependency>
@@ -33,12 +37,12 @@
         </dependency>
         <dependency>
             <groupId>org.spire-math</groupId>
-            <artifactId>spire_2.10</artifactId>
-            <version>0.9.0</version>
+            <artifactId>spire_2.11</artifactId>
+            <version>${spire-math.version}</version>
         </dependency>
         <dependency>
             <groupId>org.specs2</groupId>
-            <artifactId>specs2_2.10</artifactId>
+            <artifactId>specs2_2.11</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -40,9 +40,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scala.version>2.10.5</scala.version>
-        <geoserver.version>2.5.2</geoserver.version>
-        <gt.version>11.2</gt.version>
+        <scala.version>2.11.2</scala.version>
+        <scala-modules.version>1.0.4</scala-modules.version>
+        <geoserver.version>2.7.1.1</geoserver.version>
+        <gt.version>13.1</gt.version>
         <jts.version>1.13</jts.version>
         <jackson.codehaus.version>1.9.3</jackson.codehaus.version>
         <junit.version>4.5</junit.version>
@@ -53,14 +54,15 @@
         <hadoop.version>2.2.0</hadoop.version>
         <thrift.version>0.9.1</thrift.version>
         <scalding.version>0.13.1</scalding.version>
-
+        <com.typesafe-config.version>1.2.1</com.typesafe-config.version>
         <!-- logging properties
              we expect logging jars to be provided -->
         <!-- accumulo 1.4.3 is incompatible with a 1.5.6+ version of slf4j -->
         <!-- 1.7.x is for hadoop 2 and accumulo 1.5.x -->
         <slf4j.version>1.7.5</slf4j.version>
-        <scalalogging.version>1.1.0</scalalogging.version>
+        <scalalogging.version>2.1.2</scalalogging.version>
         <log4j.version>1.2.17</log4j.version>
+        <spire-math.version>0.10.1</spire-math.version>
 
         <!-- distribution properties -->
         <dist.accumulo.lib.ext>accumulo/lib/ext</dist.accumulo.lib.ext>
@@ -161,6 +163,17 @@
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-library</artifactId>
                 <version>${scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.scala-lang.modules</groupId>
+                <artifactId>scala-parser-combinators_2.11</artifactId>
+                <version>${scala-modules.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.scala-lang</groupId>
+                        <artifactId>scala-library</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.scala-lang</groupId>
@@ -503,7 +516,7 @@
             </dependency>
             <dependency>
                 <groupId>com.twitter</groupId>
-                <artifactId>scalding-core_2.10</artifactId>
+                <artifactId>scalding-core_2.11</artifactId>
                 <version>${scalding.version}</version>
                 <exclusions>
                     <exclusion>
@@ -697,8 +710,8 @@
                 <version>2.3.0</version>
             </dependency>
             <dependency>
-                <groupId>com.typesafe</groupId>
-                <artifactId>scalalogging-slf4j_2.10</artifactId>
+                <groupId>com.typesafe.scala-logging</groupId>
+                <artifactId>scala-logging-slf4j_2.11</artifactId>
                 <version>${scalalogging.version}</version>
             </dependency>
             <dependency>
@@ -930,8 +943,8 @@
             </dependency>
             <dependency>
                 <groupId>org.specs2</groupId>
-                <artifactId>specs2_2.10</artifactId>
-                <version>2.3.13</version>
+                <artifactId>specs2_2.11</artifactId>
+                <version>${specs2.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -949,7 +962,7 @@
             <dependency>
                 <groupId>com.typesafe</groupId>
                 <artifactId>config</artifactId>
-                <version>1.2.1</version>
+                <version>${com.typesafe-config.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.locationtech.geomesa</groupId>

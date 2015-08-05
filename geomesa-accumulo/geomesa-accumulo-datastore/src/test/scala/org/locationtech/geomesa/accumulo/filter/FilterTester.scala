@@ -10,7 +10,7 @@ package org.locationtech.geomesa.accumulo.filter
 
 import java.util.Date
 
-import com.typesafe.scalalogging.slf4j.Logging
+import com.typesafe.scalalogging.slf4j.LazyLogging
 import com.vividsolutions.jts.geom.Coordinate
 import org.geotools.data.Query
 import org.geotools.factory.{CommonFactoryFinder, Hints}
@@ -182,7 +182,7 @@ class IdQueryTest extends Specification with TestWithDataStore {
   }
 }
 
-trait FilterTester extends Specification with TestWithDataStore with Logging {
+trait FilterTester extends Specification with TestWithDataStore with LazyLogging {
 
   override def spec = SimpleFeatureTypes.encodeType(TestData.featureType)
 

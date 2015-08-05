@@ -21,7 +21,7 @@ class GeoMesaILoop extends ILoop {
 
   override def createInterpreter() {
     super.createInterpreter()
-    addThunk {
+    //addThunk {
       intp.beQuietDuring {
         intp.interpret(GeoMesaILoop.imports)
       }
@@ -33,7 +33,7 @@ class GeoMesaILoop extends ILoop {
           case _ => // ok
         }
       }
-    }
+    //}
   }
 }
 

@@ -49,7 +49,7 @@
         </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>scalding-core_2.10</artifactId>
+            <artifactId>scalding-core_2.11</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jgrapht</groupId>
@@ -81,8 +81,12 @@
             <artifactId>scala-library</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.typesafe</groupId>
-            <artifactId>scalalogging-slf4j_2.10</artifactId>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-parser-combinators_2.11</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.scala-logging</groupId>
+            <artifactId>scala-logging-slf4j_2.11</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -105,7 +109,7 @@
         </dependency>
         <dependency>
             <groupId>org.specs2</groupId>
-            <artifactId>specs2_2.10</artifactId>
+            <artifactId>specs2_2.11</artifactId>
         </dependency>
     </dependencies>
 

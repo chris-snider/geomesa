@@ -35,7 +35,8 @@ class VisibilityFilterTest extends Specification {
 
       val f = new SimpleFeatureImpl(List.empty[AnyRef], testSFT, new FeatureIdImpl(""))
 
-      f.visibility = "ADMIN&USER"
+      //f.visibility = "ADMIN&USER"
+      SecurityUtils.setFeatureVisibility(f, "ADMIN&USER")
 
       val ctx = SecurityContextHolder.createEmptyContext()
       ctx.setAuthentication(new TestingAuthenticationToken(null, null, "ADMIN", "USER"))
@@ -58,7 +59,8 @@ class VisibilityFilterTest extends Specification {
 
     "return false when user does not have the right auths" in {
       val f = new SimpleFeatureImpl(List.empty[AnyRef], testSFT, new FeatureIdImpl(""))
-      f.visibility = "ADMIN&USER"
+      //f.visibility = "ADMIN&USER"
+      SecurityUtils.setFeatureVisibility(f, "ADMIN&USER")
 
       val ctx = SecurityContextHolder.createEmptyContext()
       ctx.setAuthentication(new TestingAuthenticationToken(null, null, "ADMIN"))
@@ -70,7 +72,8 @@ class VisibilityFilterTest extends Specification {
 
     "return true when dealing with expressions" in {
       val f = new SimpleFeatureImpl(List.empty[AnyRef], testSFT, new FeatureIdImpl(""))
-      f.visibility = "ADMIN|USER"
+      //f.visibility = "ADMIN|USER"
+      SecurityUtils.setFeatureVisibility(f, "ADMIN&USER")
 
       val ctx = SecurityContextHolder.createEmptyContext()
       ctx.setAuthentication(new TestingAuthenticationToken(null, null, "USER"))

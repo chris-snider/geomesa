@@ -8,7 +8,7 @@
 
 package org.locationtech.geomesa.accumulo.index
 
-import com.typesafe.scalalogging.slf4j.Logging
+import com.typesafe.scalalogging.slf4j.LazyLogging
 import org.geotools.filter.text.ecql.ECQL
 import org.locationtech.geomesa.accumulo.index.Strategy.StrategyType
 import org.locationtech.geomesa.accumulo.index.Strategy.StrategyType.StrategyType
@@ -22,7 +22,7 @@ import scala.collection.mutable.ArrayBuffer
 /**
  * Class for splitting queries up based on Boolean clauses and the available query strategies.
  */
-class QueryFilterSplitter(sft: SimpleFeatureType, includeZ3: Boolean) extends Logging {
+class QueryFilterSplitter(sft: SimpleFeatureType, includeZ3: Boolean) extends LazyLogging {
 
   /**
    * Splits the query up into different filter plans to be evaluated. Each filter plan will consist of one or
