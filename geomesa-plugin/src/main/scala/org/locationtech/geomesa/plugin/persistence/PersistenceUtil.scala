@@ -11,20 +11,21 @@ package org.locationtech.geomesa.plugin.persistence
 import java.io.{File, FileInputStream, FileOutputStream}
 import java.util.Properties
 
-import com.typesafe.scalalogging.slf4j.Logging
-import org.vfny.geoserver.global.GeoserverDataDirectory
+import com.typesafe.scalalogging.slf4j.LazyLogging
+import org.geoserver.platform.{GeoServerExtensions, GeoServerResourceLoader}
+//import org.vfny.geoserver.global.GeoserverDataDirectory
 
 /**
  * Simple persistence strategy that keeps values in memory and writes them to a prop file in the
  * geoserver data dir. Not meant for more than a few props.
  */
-object PersistenceUtil extends Logging {
+object PersistenceUtil  extends LazyLogging {
 
   private val properties = new Properties
 
   // this method searches the classpath as well as the data directory, so don't use a package name
   // like 'geomesa'
-  private val geoMesaConfigDir = GeoserverDataDirectory.findCreateConfigDir("geomesa-config")
+  private val geoMesaConfigDir = GeoServerExtensions.bean(classOf[GeoServerResourceLoader]).findOrCreateDirectory("geomesa-config")
 
   private val configFile = new File(geoMesaConfigDir, "geomesa-config.properties")
 
