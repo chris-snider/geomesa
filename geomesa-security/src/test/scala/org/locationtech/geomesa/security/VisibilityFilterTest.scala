@@ -73,7 +73,7 @@ class VisibilityFilterTest extends Specification {
     "return true when dealing with expressions" in {
       val f = new SimpleFeatureImpl(List.empty[AnyRef], testSFT, new FeatureIdImpl(""))
       //f.visibility = "ADMIN|USER"
-      SecurityUtils.setFeatureVisibility(f, "ADMIN&USER")
+      SecurityUtils.setFeatureVisibility(f, "ADMIN|USER")
 
       val ctx = SecurityContextHolder.createEmptyContext()
       ctx.setAuthentication(new TestingAuthenticationToken(null, null, "USER"))
