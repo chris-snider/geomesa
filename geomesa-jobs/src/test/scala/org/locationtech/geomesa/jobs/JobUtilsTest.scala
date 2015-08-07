@@ -44,8 +44,8 @@ class JobUtilsTest extends Specification {
       val paths = Iterator(() => JobUtils.loadJarsFromFolder(testFolder))
       JobUtils.setLibJars(conf, search, paths)
       val libjars = conf.get("tmpjars")
-      libjars must contain("fakejars/jar1.jar")
-      libjars must contain("fakejars/nested/jar3.jar")
+      libjars must contain("fakejars" + File.separator + "jar1.jar")
+      libjars must contain("fakejars" + File.separator + "nested" + File.separator + "jar3.jar")
     }
   }
 
