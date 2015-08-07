@@ -63,7 +63,7 @@ class FeatureSpecificReaderTest  extends LazyLogging {
   def writePipeFile(sfList: List[AvroSimpleFeature]) : File = {
     val f = File.createTempFile("pipe", ".tmp")
     f.deleteOnExit()
-    val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f)))
+    val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), "UTF-8"))
     sfList.foreach { f =>
       writer.write(DataUtilities.encodeFeature(f, true))
       writer.newLine()
@@ -90,7 +90,7 @@ class FeatureSpecificReaderTest  extends LazyLogging {
 
   def readPipeFile(f:File, sft:SimpleFeatureType) : List[SimpleFeature] = {
     val sfList = ListBuffer[SimpleFeature]()
-    for (line <- Source.fromFile(f).getLines()){
+    for (line <- Source.fromFile(f, "UTF-8").getLines()){
       sfList += DataUtilities.createFeature(sft, line)
     }
     sfList.toList
