@@ -117,7 +117,7 @@ class Version1BackwardsCompatTest extends Specification {
   def writePipeFile(sfList: Seq[SimpleFeature]) = {
     val f = File.createTempFile("pipe", ".tmp")
     f.deleteOnExit()
-    val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f)))
+    val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), "UTF-8"))
     sfList.foreach { f =>
       writer.write(DataUtilities.encodeFeature(f, true))
       writer.newLine()
@@ -127,7 +127,7 @@ class Version1BackwardsCompatTest extends Specification {
   }
 
   def readPipeFile(f: File, sft: SimpleFeatureType) =
-    Source.fromFile(f).getLines.map { line => DataUtilities.createFeature(sft, line) }.toList
+    Source.fromFile(f, "UTF-8").getLines.map { line => DataUtilities.createFeature(sft, line) }.toList
 
   def createComplicatedFeatures(numFeatures : Int): Seq[Version1ASF] = {
     val geoSchema = "f0:String,f1:Integer,f2:Double,f3:Float,f4:Boolean,f5:UUID,f6:Date,f7:Point:srid=4326,f8:Polygon:srid=4326"
