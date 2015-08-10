@@ -176,6 +176,11 @@
                 </exclusions>
             </dependency>
             <dependency>
+                <groupId>org.scala-lang.modules</groupId>
+                <artifactId>scala-xml_2.11</artifactId>
+                <version>${scala-modules.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-compiler</artifactId>
                 <version>${scala.version}</version>
@@ -462,13 +467,15 @@
                 <groupId>org.geotools</groupId>
                 <artifactId>gt-grid</artifactId>
                 <version>${gt.version}</version>
+<!--
                 <exclusions>
                     <exclusion>
-                        <!-- excluded due to license issues -->
+                        &lt;!&ndash; excluded due to license issues &ndash;&gt;
                         <groupId>javax.media</groupId>
                         <artifactId>jai_core</artifactId>
                     </exclusion>
                 </exclusions>
+-->
             </dependency>
             <dependency>
                 <groupId>commons-pool</groupId>
@@ -649,9 +656,9 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.spark</groupId>
-                <artifactId>spark-core_2.10</artifactId>
-                <version>1.1.0</version>
-                <scope>provided</scope>
+                <artifactId>spark-core_2.11</artifactId>
+                <version>1.4.0</version>
+                <!--<scope>provided</scope>-->
             </dependency>
             <dependency>
                 <groupId>org.objenesis</groupId>
@@ -1036,8 +1043,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>2.3.2</version>
                     <configuration>
-                        <source>1.7</source>
-                        <target>1.7</target>
+                        <source>1.8</source>
+                        <target>1.8</target>
                     </configuration>
                 </plugin>
                 <plugin>
