@@ -12,7 +12,7 @@ import com.typesafe.scalalogging.slf4j.LazyLogging
 import org.junit.{Assert, Test}
 import org.locationtech.geomesa.utils.geohash.{BoundingBox, GeoHash}
 
-class BoundingBoxUtilTest  extends LazyLogging {
+class BoundingBoxUtilTest extends LazyLogging {
   @Test def getRangesTest {
     val bbox: BoundingBox = BoundingBox.apply(GeoHash.apply("tmzcrzpt").getPoint, GeoHash.apply("ttb12p21").getPoint)
     val ranges = BoundingBoxUtil.getRanges(bbox)

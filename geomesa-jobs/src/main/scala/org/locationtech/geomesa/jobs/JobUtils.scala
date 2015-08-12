@@ -24,7 +24,7 @@ import org.locationtech.geomesa.jobs.mapreduce.GeoMesaInputFormat._
 import scala.io.Source
 import scala.util.Try
 
-object JobUtils  extends LazyLogging {
+object JobUtils extends LazyLogging {
 
   // default jars that will be included with m/r jobs
   lazy val defaultLibJars = {

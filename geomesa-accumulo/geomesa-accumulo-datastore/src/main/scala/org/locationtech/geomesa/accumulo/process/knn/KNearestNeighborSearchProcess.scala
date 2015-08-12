@@ -28,7 +28,7 @@ import scala.collection.JavaConverters._
   title = "Geomesa-enabled K Nearest Neighbor Search",
   description = "Performs a K Nearest Neighbor search on a Geomesa feature collection using another feature collection as input"
 )
-class KNearestNeighborSearchProcess  extends LazyLogging {
+class KNearestNeighborSearchProcess extends LazyLogging {
 
   @DescribeResult(description = "Output feature collection")
   def execute(

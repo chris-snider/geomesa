@@ -14,7 +14,7 @@ import org.locationtech.geomesa.tools.commands.convert.GeoMesaIStringConverterFa
 
 import scala.collection.JavaConversions._
 
-object Runner  extends LazyLogging {
+object Runner extends LazyLogging {
 
   def main(args: Array[String]): Unit = {
     val jc = new JCommander()

@@ -37,7 +37,7 @@ import scala.util.{Failure, Success, Try}
 case class KafkaConsumer[K, V](topic: String,
                                config: ConsumerConfig,
                                keyDecoder: Decoder[K],
-                               valueDecoder: Decoder[V])  extends LazyLogging {
+                               valueDecoder: Decoder[V]) extends LazyLogging {
 
   import KafkaConsumer._
 
@@ -294,7 +294,7 @@ case class KafkaConsumer[K, V](topic: String,
   }
 }
 
-trait Fetcher  extends LazyLogging {
+trait Fetcher extends LazyLogging {
 
   /**
    * Fetch messages
@@ -319,7 +319,7 @@ trait Fetcher  extends LazyLogging {
   }
 }
 
-object KafkaConsumer  extends LazyLogging {
+object KafkaConsumer extends LazyLogging {
 
   import org.locationtech.geomesa.utils.geotools.RichIterator.RichIterator
 

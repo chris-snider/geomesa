@@ -57,7 +57,7 @@ class MapAggregatingIterator(other: MapAggregatingIterator, env: IteratorEnviron
   }
 }
 
-object MapAggregatingIterator  extends LazyLogging {
+object MapAggregatingIterator extends LazyLogging {
 
   val MAP_ATTRIBUTE = "map_attribute"
   def projectedSFTDef(mapAttributeName: String, underlyingSFT: SimpleFeatureType) = {

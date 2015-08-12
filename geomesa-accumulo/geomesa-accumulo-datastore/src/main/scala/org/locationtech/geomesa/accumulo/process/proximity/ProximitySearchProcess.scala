@@ -28,7 +28,7 @@ import org.opengis.filter.Filter
   title = "Geomesa-enabled Proximity Search",
   description = "Performs a proximity search on a Geomesa feature collection using another feature collection as input"
 )
-class ProximitySearchProcess  extends LazyLogging {
+class ProximitySearchProcess extends LazyLogging {
 
   @DescribeResult(description = "Output feature collection")
   def execute(

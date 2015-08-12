@@ -249,7 +249,7 @@ class OffsetManager(val config: ConsumerConfig)
   }
 }
 
-object OffsetManager  extends LazyLogging {
+object OffsetManager extends LazyLogging {
 
   type Offsets = Map[TopicAndPartition, Long]
 

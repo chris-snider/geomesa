@@ -217,7 +217,7 @@ class BinaryViewerOutputFormat(gs: GeoServer)
 
 }
 
-object BinaryViewerOutputFormat  extends LazyLogging {
+object BinaryViewerOutputFormat extends LazyLogging {
 
   import org.locationtech.geomesa.filter.function.AxisOrder
   import org.locationtech.geomesa.filter.function.AxisOrder.{LatLon, LonLat}

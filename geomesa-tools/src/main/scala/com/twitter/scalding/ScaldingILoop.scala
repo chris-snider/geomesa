@@ -25,7 +25,6 @@ class ScaldingILoop extends ILoop {
 
   override def createInterpreter() {
     super.createInterpreter()
-    //addThunk {
       intp.beQuietDuring {
         intp.interpret(ScaldingILoop.imports)
       }
@@ -37,7 +36,6 @@ class ScaldingILoop extends ILoop {
           case _ => // ok
         }
       }
-    //}
   }
 }
 

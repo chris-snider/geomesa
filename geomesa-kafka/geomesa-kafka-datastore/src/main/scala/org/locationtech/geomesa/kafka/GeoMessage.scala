@@ -124,7 +124,7 @@ class GeoMessageEncoder(schema: SimpleFeatureType) {
   *
   * @param schema the [[SimpleFeatureType]]; required to deserialize [[CreateOrUpdate]] messages
   */
-class GeoMessageDecoder(schema: SimpleFeatureType)  extends LazyLogging {
+class GeoMessageDecoder(schema: SimpleFeatureType) extends LazyLogging {
 
   case class MsgKey(version: Byte, msgType: Byte, ts: Instant)
 

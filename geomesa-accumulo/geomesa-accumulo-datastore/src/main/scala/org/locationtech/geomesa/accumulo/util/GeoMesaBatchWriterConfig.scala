@@ -16,7 +16,7 @@ import org.locationtech.geomesa.accumulo.GeomesaSystemProperties.PropAndDefault
 
 import scala.util.Try
 
-object GeoMesaBatchWriterConfig  extends LazyLogging {
+object GeoMesaBatchWriterConfig extends LazyLogging {
 
   protected[util] def fetchProperty(prop: PropAndDefault): Option[Long] =
     for { p <- Option(prop.get); num <- Try(java.lang.Long.parseLong(p)).toOption } yield num

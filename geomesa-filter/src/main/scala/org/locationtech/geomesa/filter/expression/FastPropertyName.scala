@@ -8,11 +8,8 @@
 
 package org.locationtech.geomesa.filter.expression
 
-//import org.geotools.filter.expression.FilterVisitorExpressionWrapper
-import org.geotools.filter.ExpressionType
 import org.geotools.util.Converters
 import org.opengis.feature.simple.SimpleFeature
-import org.opengis.filter.FilterVisitor
 import org.opengis.filter.expression.{ExpressionVisitor, PropertyName}
 import org.xml.sax.helpers.NamespaceSupport
 
@@ -43,10 +40,4 @@ class FastPropertyName(name: String) extends PropertyName with org.opengis.filte
 
   override def accept(visitor: ExpressionVisitor, extraData: AnyRef): AnyRef = visitor.visit(this, extraData)
 
-/*  // geotools filter methods - deprecated but still sometimes used
-  override def getType: Short = ExpressionType.ATTRIBUTE
-  override def getValue(feature: SimpleFeature): AnyRef = evaluate(feature.asInstanceOf[AnyRef])
-  override def evaluate(feature: SimpleFeature): AnyRef = evaluate(feature.asInstanceOf[AnyRef])
-  override def accept(visitor: FilterVisitor): Unit =
-    accept(new FilterVisitorExpressionWrapper(visitor), null)*/
 }

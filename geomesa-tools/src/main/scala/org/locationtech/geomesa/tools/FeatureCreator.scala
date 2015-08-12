@@ -14,7 +14,7 @@ import org.locationtech.geomesa.tools.commands.CreateFeatureParams
 import org.locationtech.geomesa.utils.geotools.RichSimpleFeatureType.RichSimpleFeatureType
 import org.locationtech.geomesa.utils.geotools.SimpleFeatureTypes
 
-object FeatureCreator  extends LazyLogging {
+object FeatureCreator extends LazyLogging {
 
   def createFeature(params: CreateFeatureParams): Unit = {
     val ds = new DataStoreHelper(params).getOrCreateDs

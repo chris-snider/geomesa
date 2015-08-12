@@ -13,13 +13,12 @@ import java.util.Properties
 
 import com.typesafe.scalalogging.slf4j.LazyLogging
 import org.geoserver.platform.{GeoServerExtensions, GeoServerResourceLoader}
-//import org.vfny.geoserver.global.GeoserverDataDirectory
 
 /**
  * Simple persistence strategy that keeps values in memory and writes them to a prop file in the
  * geoserver data dir. Not meant for more than a few props.
  */
-object PersistenceUtil  extends LazyLogging {
+object PersistenceUtil extends LazyLogging {
 
   private val properties = new Properties
 

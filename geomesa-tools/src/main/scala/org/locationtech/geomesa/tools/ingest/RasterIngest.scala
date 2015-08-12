@@ -24,7 +24,7 @@ import org.locationtech.geomesa.tools.Utils.Formats._
 
 import scala.collection.JavaConversions._
 
-trait RasterIngest  extends LazyLogging {
+trait RasterIngest extends LazyLogging {
   def getAccumuloRasterStoreConf(config: Map[String, Option[String]]): JMap[String, Serializable] =
     mapAsJavaMap(Map(
       dsp.instanceIdParam.getName   -> config(IngestRasterParams.ACCUMULO_INSTANCE).get,

@@ -17,7 +17,7 @@ import org.opengis.feature.simple.{SimpleFeature, SimpleFeatureType}
 
 /** A service for adding to security to feature readers.
  */
-object DataStoreSecurityService  extends LazyLogging {
+object DataStoreSecurityService extends LazyLogging {
 
   lazy val provider: DataStoreSecurityProvider = {
     val providers = ServiceLoader.load(classOf[DataStoreSecurityProvider]).iterator()

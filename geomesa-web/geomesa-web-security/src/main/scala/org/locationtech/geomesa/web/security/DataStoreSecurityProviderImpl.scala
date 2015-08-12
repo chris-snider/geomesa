@@ -95,7 +95,7 @@ object GMSecureFeatureSource {
   }
 }
 
-object GMSecureFeatureCollection  extends LazyLogging {
+object GMSecureFeatureCollection extends LazyLogging {
 
   def apply(fc: FC): SimpleFeatureCollection = {
     logger.info("Secured Feature Collection '{}'", fc)
@@ -105,7 +105,7 @@ object GMSecureFeatureCollection  extends LazyLogging {
   }
 }
 
-object GMSecureFeatureReader  extends LazyLogging {
+object GMSecureFeatureReader extends LazyLogging {
 
   def apply(fr: FR): FR = {
     logger.info("Secured Feature Reader '{}'", fr)

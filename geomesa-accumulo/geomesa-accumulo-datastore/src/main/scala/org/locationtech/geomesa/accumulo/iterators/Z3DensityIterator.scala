@@ -188,7 +188,7 @@ class Z3DensityIterator extends SortedKeyValueIterator[Key, Value] with LazyLogg
   override def deepCopy(env: IteratorEnvironment): SortedKeyValueIterator[Key, Value] = ???
 }
 
-object Z3DensityIterator  extends LazyLogging {
+object Z3DensityIterator extends LazyLogging {
 
   // need to be lazy to avoid class loading issues before init is called
   lazy val DENSITY_SFT = SimpleFeatureTypes.createType("density", "result:String,*geom:Point:srid=4326")

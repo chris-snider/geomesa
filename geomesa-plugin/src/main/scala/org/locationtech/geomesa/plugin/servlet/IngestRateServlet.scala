@@ -90,7 +90,7 @@ class IngestRateServlet extends AbstractController {
   }
 }
 
-object IngestRateServlet  extends LazyLogging {
+object IngestRateServlet extends LazyLogging {
 
   val TABLES_PARAM = "tables"
 

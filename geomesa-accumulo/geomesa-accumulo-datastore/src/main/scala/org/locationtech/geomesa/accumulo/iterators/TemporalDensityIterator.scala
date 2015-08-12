@@ -78,7 +78,7 @@ class TemporalDensityIterator(other: TemporalDensityIterator, env: IteratorEnvir
   }
 }
 
-object TemporalDensityIterator  extends LazyLogging {
+object TemporalDensityIterator extends LazyLogging {
 
   val INTERVAL_KEY = "geomesa.temporal.density.bounds"
   val BUCKETS_KEY = "geomesa.temporal.density.buckets"

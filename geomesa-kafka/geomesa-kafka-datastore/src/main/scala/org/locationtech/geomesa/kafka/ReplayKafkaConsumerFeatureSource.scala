@@ -282,7 +282,7 @@ case class ReplayConfig(start: Instant, end: Instant, readBehind: Duration) {
   def isInWindow(time: Long): Boolean = !(start.isAfter(time) || end.isBefore(time))
 }
 
-object ReplayConfig  extends LazyLogging {
+object ReplayConfig extends LazyLogging {
 
   def apply(start: Long, end: Long, readBehind: Long): ReplayConfig =
     ReplayConfig(new Instant(start), new Instant(end), Duration.millis(readBehind))

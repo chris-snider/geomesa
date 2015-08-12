@@ -30,7 +30,7 @@ import scala.collection.mutable.ListBuffer
 import scala.io.Source
 import scala.util.Random
 
-class FeatureSpecificReaderTest  extends LazyLogging {
+class FeatureSpecificReaderTest extends LazyLogging {
 
 
   def createTypeWithGeo: AvroSimpleFeature = {

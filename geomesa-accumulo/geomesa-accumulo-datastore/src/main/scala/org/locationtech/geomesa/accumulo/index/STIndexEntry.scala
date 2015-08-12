@@ -23,7 +23,7 @@ import org.opengis.feature.simple.SimpleFeatureType
 import scala.collection.JavaConversions._
 
 case class STIndexEncoder(sft: SimpleFeatureType, rowf: TextFormatter, cff: TextFormatter, cqf: TextFormatter)
-    extends LazyLogging {
+     extends LazyLogging {
 
   import org.locationtech.geomesa.utils.geohash.GeohashUtils._
 

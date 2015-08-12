@@ -25,7 +25,7 @@ import org.opengis.filter.Filter
   title = "Geomesa Query",
   description = "Performs a Geomesa optimized query using spatiotemporal indexes"
 )
-class QueryProcess  extends LazyLogging {
+class QueryProcess extends LazyLogging {
 
   @DescribeResult(description = "Output feature collection")
   def execute(

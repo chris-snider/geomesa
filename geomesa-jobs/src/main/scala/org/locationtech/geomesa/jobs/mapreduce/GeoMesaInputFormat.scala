@@ -37,7 +37,7 @@ import scala.annotation.tailrec
 import scala.collection.JavaConversions._
 import scala.collection.mutable.ArrayBuffer
 
-object GeoMesaInputFormat  extends LazyLogging {
+object GeoMesaInputFormat extends LazyLogging {
 
   def configure(job: Job,
                 dsParams: Map[String, String],

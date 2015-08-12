@@ -35,7 +35,7 @@ object UnitTestEntryType  {
   def getTypeSpec = "POINT:String," + "LINESTRING:String," + "POLYGON:String," + "attr2:String," + spec
 }
 
-object TestData  extends LazyLogging {
+object TestData extends LazyLogging {
   val TEST_USER = "root"
   val TEST_TABLE = "test_table"
   val TEST_AUTHORIZATIONS = Constants.NO_AUTHS

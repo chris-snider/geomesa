@@ -31,7 +31,7 @@ import org.opengis.filter.Filter
 import scala.collection.JavaConversions._
 import scala.util.Try
 
-object AccumuloRasterQueryPlanner  extends LazyLogging with IndexFilterHelpers {
+object AccumuloRasterQueryPlanner extends LazyLogging with IndexFilterHelpers {
 
   // The two geometries must at least have some intersection that is two-dimensional
   def improvedOverlaps(a: Geometry, b: Geometry): Boolean = a.relate(b, "2********")

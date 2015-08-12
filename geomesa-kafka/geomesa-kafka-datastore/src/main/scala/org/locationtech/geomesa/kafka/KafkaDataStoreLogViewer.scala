@@ -25,7 +25,7 @@ import org.opengis.feature.simple.SimpleFeatureType
   * classname in the exec command at the end of the script with
   * org.locationtech.geomesa.kafka.KafkaDataStoreLogViewer.
   */
-object KafkaDataStoreLogViewer  extends LazyLogging {
+object KafkaDataStoreLogViewer extends LazyLogging {
 
   import KafkaGeoMessageFormatter._
 

@@ -55,7 +55,7 @@ object RasterEntry {
   }
 }
 
-object RasterEntryEncoder  extends LazyLogging {
+object RasterEntryEncoder extends LazyLogging {
 
   def encode(raster: Raster, visibility: String = ""): KeyValuePair = {
 

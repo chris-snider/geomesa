@@ -13,7 +13,7 @@ import com.typesafe.scalalogging.slf4j.LazyLogging
 import org.apache.accumulo.core.client.IteratorSetting
 import org.locationtech.geomesa.accumulo.iterators.BBOXCombiner
 
-object AccumuloRasterBoundsPlanner  extends LazyLogging {
+object AccumuloRasterBoundsPlanner extends LazyLogging {
 
   def getBoundsScannerCfg(tableName: String): IteratorSetting = {
     logger.debug(s"Raster Bounds Planner for table: $tableName")

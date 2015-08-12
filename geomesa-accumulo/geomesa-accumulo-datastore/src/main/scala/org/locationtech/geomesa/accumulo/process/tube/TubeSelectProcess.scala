@@ -33,7 +33,7 @@ import scala.collection.JavaConversions._
   title = "Tube Select",
   description = "Performs a tube select on a Geomesa feature collection based on another feature collection"
 )
-class TubeSelectProcess  extends LazyLogging {
+class TubeSelectProcess extends LazyLogging {
 
   @DescribeResult(description = "Output feature collection")
   def execute(

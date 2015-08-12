@@ -29,7 +29,7 @@ trait Stat {
 /**
  * Trait for mapping stats to accumulo and back
  */
-trait StatTransform[S <: Stat]  extends LazyLogging {
+trait StatTransform[S <: Stat] extends LazyLogging {
 
   protected def createMutation(stat: Stat) = new Mutation(s"${stat.featureName}~${StatTransform.dateFormat.print(stat.date)}")
 

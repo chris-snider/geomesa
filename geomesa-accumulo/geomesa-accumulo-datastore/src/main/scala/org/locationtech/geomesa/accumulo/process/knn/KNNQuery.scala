@@ -23,7 +23,7 @@ import scala.annotation.tailrec
  */
 
 
-object KNNQuery  extends LazyLogging {
+object KNNQuery extends LazyLogging {
   /**
    * Method to kick off a new KNN query about aFeatureForSearch
    *

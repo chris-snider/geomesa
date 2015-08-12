@@ -25,7 +25,7 @@ trait HasEmbeddedKafka {
   def shutdown(): Unit = EmbeddedKafka.shutdown()
 }
 
-trait EmbeddedServiceManager[S <: EmbeddedService[C], C]  extends LazyLogging {
+trait EmbeddedServiceManager[S <: EmbeddedService[C], C] extends LazyLogging {
 
   private var count = 0
   private var service: S = null.asInstanceOf[S]

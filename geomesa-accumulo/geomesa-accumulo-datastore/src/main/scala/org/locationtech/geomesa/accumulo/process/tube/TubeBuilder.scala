@@ -29,7 +29,7 @@ import org.opengis.feature.simple.{SimpleFeature, SimpleFeatureType}
  */
 abstract class TubeBuilder(val tubeFeatures: SimpleFeatureCollection,
                            val bufferDistance: Double,
-                           val maxBins: Int)  extends LazyLogging {
+                           val maxBins: Int) extends LazyLogging {
 
   val calc = new GeodeticCalculator()
   val dtgField = extractDtgField(tubeFeatures.getSchema)

@@ -28,7 +28,7 @@ import org.opengis.feature.simple.SimpleFeature
   title = "Temporal Density Process",
   description = "Returns a histogram of how many data points fall in different time buckets within an interval."
 )
-class TemporalDensityProcess  extends LazyLogging {
+class TemporalDensityProcess extends LazyLogging {
 
   @DescribeResult(description = "Output feature collection")
   def execute(
