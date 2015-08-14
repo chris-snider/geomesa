@@ -150,7 +150,7 @@
         </profile>
     </profiles>
 
-    <distributionManagement>
+    <!-- distributionManagement>
         <repository>
             <id>repo.locationtech.org</id>
             <name>GeoMesa Repository - Releases</name>
@@ -161,7 +161,7 @@
             <name>GeoMesa Repository - Snapshots</name>
             <url>https://repo.locationtech.org/content/repositories/geomesa-snapshots/</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement -->
 
     <dependencyManagement>
         <dependencies>
