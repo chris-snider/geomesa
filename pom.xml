@@ -14,6 +14,12 @@
     <version>1.1.0-rc.5.ISS.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GeoMesa</name>
+	
+	<parent>
+      <groupId>com.issinc</groupId>
+      <artifactId>iss-parent</artifactId>
+      <version>6</version>
+   </parent>
 
     <modules>
         <module>geomesa-utils</module>
