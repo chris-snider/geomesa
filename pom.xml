@@ -1153,9 +1153,8 @@
     <scm>
         <connection>scm:git:stash.issinc.com:7999/ovr/geomesa.git</connection>
         <developerConnection>scm:git:stash.issinc.com:7999/ovr/geomesa.git</developerConnection>
-        <url>https://stash.issinc.com:7999/ovr/geomesa</url>
-        <tag>HEAD</tag>
-    </scm>
+        <url>https://stash.issinc.com/stash/projects/OVR/repos/geomesa</url>
+     </scm>
 
     <repositories>
 <!--
