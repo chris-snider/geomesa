@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.locationtech.geomesa</groupId>
     <artifactId>geomesa</artifactId>
-    <version>1.1.0-rc.5.ISS.1-SNAPSHOT</version>
+    <version>1.1.0-rc.5.ISS.1</version>
     <packaging>pom</packaging>
     <name>GeoMesa</name>
 	
@@ -1154,7 +1154,8 @@
         <connection>scm:git:ssh://git@stash.issinc.com:7999/ovr/geomesa.git</connection>
         <developerConnection>scm:git:ssh://git@stash.issinc.com:7999/ovr/geomesa.git</developerConnection>
         <url>https://stash.issinc.com/stash/projects/OVR/repos/geomesa</url>
-     </scm>
+       <tag>geomesa-1.1.0-rc.5.ISS.1</tag>
+  </scm>
 
     <repositories>
 <!--
