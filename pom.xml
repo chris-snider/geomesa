@@ -85,7 +85,7 @@
 
     <profiles>
         <profile>
-            <id>Accumulo 1.6</id>
+            <id>Accumulo_1.6</id>
             <activation>
                 <property><name>!accumulo-1.5</name></property>
             </activation>
@@ -106,7 +106,7 @@
         </profile>
 
         <profile>
-            <id>Accumulo 1.5</id>
+            <id>Accumulo_1.5</id>
             <activation>
                 <property><name>accumulo-1.5</name></property>
             </activation>
