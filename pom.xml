@@ -86,9 +86,11 @@
     <profiles>
         <profile>
             <id>Accumulo_1.6</id>
+<!--
             <activation>
                 <property><name>!accumulo-1.5</name></property>
             </activation>
+-->
             <properties>
                 <accumulo.version>1.6.2</accumulo.version>
             </properties>
@@ -107,9 +109,11 @@
 
         <profile>
             <id>Accumulo_1.5</id>
+<!--
             <activation>
                 <property><name>accumulo-1.5</name></property>
             </activation>
+-->
             <properties>
                 <accumulo.version>1.5.2</accumulo.version>
             </properties>
